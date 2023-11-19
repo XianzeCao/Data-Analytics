@@ -1,6 +1,6 @@
 Incentive :  understand customer better
 
-Data source : data plane (runs database pods) ,  control plane(customer facing UI & database operations),  AWS billing 
+Data source : data plane (runs database pods) ,  control plane(customer facing UI & database operations),  AWS/GCP billing 
 
 Architecture:
 
@@ -15,6 +15,36 @@ Airflow -- scheduler
 AWS s3 -- immediate storage for raw data
 
 Superset: internal BI & ah-hoc tool 
+
+
+
+### Data source to S3:
+
+Control plane, data plane etc    -- native functionality to export data
+
+GCP billing,  BigQuery export queries -> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Idempotency 
+
+Most tables here use ReplicateReplacingMergeTree engine -- records with the same key will be squashed and only the last record will retain
+
+
 
 
 
